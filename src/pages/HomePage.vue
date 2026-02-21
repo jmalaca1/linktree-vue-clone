@@ -30,17 +30,6 @@ const profile = ref({
         v-for="x of [1, 2, 3]"
         :key="x"
       />
-      <LinkCard 
-      <LinkCard 
-        title="GitHub Profile"
-        description="View my GitHub profile"
-        url="https://github.com/jacqueline-malacara"
-      />
-      <LinkCard 
-        title="LinkedIn Profile"
-        description="Connect with me on LinkedIn"
-        url="https://www.linkedin.com/in/jacqueline-malacara-ortega-700254258/"
-      />
     </div>
 
     <!-- Navigate to Info -->
