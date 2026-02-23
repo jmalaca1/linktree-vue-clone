@@ -6,6 +6,20 @@ const profile = ref({
   name: 'Jacqueline Malacara Ortega',
   slogan: 'Program Developer and Student',
   image: 'https://imgur.com/BNuS0Vo.png',
+  links: [
+    { id: '1',
+      title: 'GitHub',
+      url: 'https://github.com/jmalaca1',
+      icon: 'code',
+      description: 'Check out my projects 🩷',
+    },
+    { id: '2',
+      title: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/jacqueline-malacara-ortega-879935308/',
+      icon: 'briefcase',
+      description: 'Connect with me professionally 🩷',
+    },
+  ],
 })
 </script>
 
@@ -29,8 +43,12 @@ const profile = ref({
     <!-- Link List -->
     <div class="flex w-full max-w-md flex-col gap-4">
       <LinkCard
-        v-for="x of [1, 2, 3]"
-        :key="x"
+        v-for="link in profile.links"
+        :key="link.id"
+        :title="link.title"
+        :url="link.url"
+        :description="link.description"
+        :icon="link.icon"
       />
     </div>
 
